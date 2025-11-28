@@ -1,0 +1,48 @@
+{% extends "base.html" %} 
+{% block title %}home {% endblock %} 
+{% block head%}		
+
+{{ super() }}
+<style>
+.container {
+	display: flex;
+	flex-direction: column;
+}	
+.title {
+	font-size: 80px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.text {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+</style>
+{% endblock %} 
+{% block content %}
+<div class=container>
+	<div class=title> my 10 principles </div>
+	<div class=text> 1. DON’T PANIC, DON'T EXPECT, DON'T OVERCOMPLICATE</div>
+
+	<div class=text>2. REST WELL, REFLECTION IS AS, IF NOT MORE IMPORTANT THAN ACTION </div>
+
+	<div class=text>3. SENSIBLY QUESTION EVERYTHING </div>
+
+	<div class=text>4. BEWARE OF YOUR EGO</div>
+
+	<div class=text>5. SMOOTH IS SLOW, AND SLOW IS FAST</div>
+
+	<div class=text>6. SPARE TIME FOR YOUR THOUGHTS</div>
+
+	<div class=text><span style="color:red">7. accept death, life is long, cherish the past,
+			be pleasant with the present and be excited about the future. don’t lose ur mind over it </span> </div>
+
+	<div class=text> 8. DON'T FEAR FAILURE </div>
+
+	<div class=text>9. ARE YOU LYING TO YOURSELF? </div>
+
+	<div class=text>10. NEVER FOREGO THE FUNDAMENTALS </div>
+</div>
+{% endblock %}

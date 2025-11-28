@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+    <style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+				font-family: Verdana, helvetica, sans-serif;
+				background-color: #000000;
+				color: white;
+			}
+			a {
+				color: #2264F0;
+				text-decoration: none;
+			}
+			.navbar {
+				display: flex;
+				height: 50px;
+				font-size: 24px;
+				justify-content: center;
+				width: 100%;
+			}
+			.navbar ul {
+				display: flex;
+				justify-content: center;
+				flex-flow: row wrap;
+				list-style-type: none;
+				gap: 10px;
+				width: 100%;
+			}
+			.navbar ul li a {
+				color: white;
+				padding: 0px 10px 0px 10px;
+			}
+			.navbar ul li a:hover {
+				text-decoration: underline;
+			}
+			.content {
+				display: flex;
+				justify-content: center;
+				width: 50%;
+				margin: auto;
+			}
+		@media screen and (min-width: 290px) and (max-width: 801px) {
+						.navbar ul {
+							flex-flow: column wrap;
+						}
+						.navbar {
+							height: auto;
+						}	
+						.content {
+							width: 90%;
+						}
+					}
+    </style>
+  </head>
+  <body>
+		<div class="navbar">
+			<ul>
+				<li><a href="/about-me">about me</a></li>
+				<li><a href="/">home</a></li>
+				<li><a href="/blog">blog</a></li>
+				<li><a href="/projects">projects</a></li>
+			</ul>
+		</div>
+		<div class="content">{% block content %}{% endblock %}</div>
+		</div>
+		<script>
+			window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+			window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		</script>
+		<script defer src="/_vercel/speed-insights/script.js"></script>
+		<script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

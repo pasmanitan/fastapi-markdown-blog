@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% block title %}about me{% endblock %} 
+{% block head%}
+
+{{ super() }}
+<style>
+.container {
+	font-size: 30px;
+}
+
+@media screen and (min-width: 390px) and (max-width: 767px) {
+	.container {
+		font-size: 24px;
+	}
+
+</style>
+{% endblock %} {% block content %}
+
+<div class="container">
+    <p>Hi.</p>
+    <p>I like to code, run, workout, read, watch movies, listen to music, play basketball, making beats on Reaper, doing art.</p>
+		<p> I came up with this name pasmanitan from my 2 favorite pokemon i.e passimian and
+		darmanitan when I was 10 years old. changing this username in every
+		website would take a long time, so I will just stick with it. </p>
+    <a
+      href="https://github.com/pasmanitan"
+      target="_blank"
+      rel="noopener
+			noreferrer"
+      >github
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %} {{ title }} {% endblock %} 
+{% block head%}
+
+{{ super() }}
+<style>
+.container {
+	display: flex;
+	flex-direction: column;
+	font-size: 24px;
+}
+</style>
+{% endblock %}	
+{% block content %} 
+<div class="container">
+	<div>
+		<h1 style="text-align: center;"> {{ title }} </h1>		
+		<h3> {{ desc }} </h3>
+		<p> Published On: {{ date }} </p>
+	</div>
+	<div>
+		{{ html | safe }}
+	</div>
+</div>
+{% endblock %}
